@@ -1,9 +1,6 @@
 import React, { useEffect } from "react";
 import { capitalizeFirstLetter } from "../../utils/helpers";
 
-function categorySelected(name) {
-  console.log(`${name} clicked`);
-}
 const Nav = (props) => {
   const { categories = [], setCurrentCategory, currentCategory } = props;
 
@@ -40,7 +37,7 @@ const Nav = (props) => {
             >
               <span
                 onClick={() => {
-                  categorySelected(category);
+                  setCurrentCategory(category);
                 }}
               >
                 {capitalizeFirstLetter(category.name)}
